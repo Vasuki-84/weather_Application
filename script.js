@@ -28,9 +28,11 @@ async function getWeather() {
         <h4>${data.name}, ${data.sys.country}</h4>
         <img src="${iconUrl}" />
         <p><strong>${data.weather[0].main}</strong>-${data.weather[0].description}</p>
+        <div class= "justify-content-center">
         <p>🌡️ Temperature : ${data.main.temp}</p>
         <p>💧 Humidity: ${data.main.humidity}</p>
         <p>💨 Wind Speed: ${data.wind.speed}</p>
+        </div>
         `
     } catch (err) {
         result.innerHTML = ` <div class="alert alert-danger">${err.message}</div> `
