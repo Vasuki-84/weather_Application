@@ -9,10 +9,12 @@ async function getWeather() {
         result.innerHTML =
             `
         <div class="alert alert-warning"> Please enter a city name </div>
+         <div class="spinner-border text-primary" role="status"> </div>
+
         `
     }
 
-    result.innerHTML =  ` <div class="spinner-border text-primary" role="status"> </div>  `
+    // result.innerHTML =  `  `
 
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
